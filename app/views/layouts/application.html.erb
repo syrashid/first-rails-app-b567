@@ -10,6 +10,17 @@
   </head>
 
   <body>
+    <div style="background: black; color: gold; padding: 1rem 2rem">
+      <h3>Navbar, Today's Date is <%= Time.now %></h3>
+      <%= link_to "HOME", root_path %>
+      <%= link_to "ABOUT", about_path %>
+      <%= link_to "TEAM", team_path %>
+    </div>
+
+    <form action="/team" method="get">
+      <input type="text" name="member" value='<%= params[:member] %>' placeholder="Who are you looking for?">
+      <input type="submit">
+    </form>
     <%= yield %>
   </body>
 </html>

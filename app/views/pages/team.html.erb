@@ -1,0 +1,9 @@
+<h1>These are our team members</h1>
+
+<h2>Meet our team below:</h2>
+
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
